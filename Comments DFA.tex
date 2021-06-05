@@ -1,0 +1,16 @@
+\documentclass[11pt]{article}
+\usepackage{vaucanson-g}
+\begin{document}
+\ShowGrid
+\begin{VCPicture}{(6,-1)(15,8)}
+%6 states
+\State[1]{(7,7)}{Q0} \State[2]{(10,7)}{Q1} \State[3]{(13,6)}{Q2}
+\State[4]{(10,4)}{Q3} \State[5]{(13,2)}{Q4} \FinalState[6]{(9,0)}{Q5}
+%1 initial-final
+\Initial{Q0}
+%5 transitions
+\EdgeL{Q0}{Q1}{/} \EdgeL{Q1}{Q2}{*}
+\EdgeL{Q2}{Q3}{(string|spaces)*} \EdgeL{Q3}{Q4}{*}
+\EdgeL{Q4}{Q5}{/}
+\end{VCPicture}
+\end{document}

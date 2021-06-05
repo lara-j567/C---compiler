@@ -1,0 +1,14 @@
+\documentclass[11pt]{article}
+\usepackage{vaucanson-g}
+\begin{document}
+\ShowGrid
+\begin{VCPicture}{(1,1)(16,10)}
+%3 states
+\State[1]{(2,9)}{Q2} \State[2]{(7,9)}{Q3} \FinalState[3]{(15,2)}{Q4}
+%1 initial-final
+\Initial{Q2}
+%3 transitions
+\EdgeL{Q2}{Q3}{alphabet} \EdgeL{Q3}{Q4}{(alphabet| digit)*}
+\LoopN{Q4}{(alphabet| digit)*}
+\end{VCPicture}
+\end{document}
