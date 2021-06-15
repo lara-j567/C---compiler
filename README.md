@@ -7,3 +7,5 @@ This C++ program has all phases of compiler for the language C-- :
 ->code generator
 
 Place test.cmm in working directory before runnig program.
+
+Input path of test.cmm in console when prompted.
